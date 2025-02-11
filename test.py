@@ -6,3 +6,4 @@ frame=x.get_frame()
 frame = x.color(frame)
 x.picture(frame)
 
+print("Done")

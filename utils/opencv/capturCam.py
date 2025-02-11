@@ -1,3 +1,5 @@
+import os
+os.environ["OPENCV_VIDEOIO_MSMF_ENABLE_HW_TRANSFORMS"] = "0"
 import cv2
 import numpy as np
 
@@ -5,6 +7,7 @@ import numpy as np
 class CapturCam:
     def __init__(self, camera=0):
         self.camera = cv2.VideoCapture(camera)
+        print(self.camera)
 
     def get_frame(self):
         success, frame = self.camera.read()
